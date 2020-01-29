@@ -1,0 +1,6 @@
+#endpoint: ""
+endpoint: https://eu1.prisma.sh/evandro-cavalcante-santos-7cf348/hackernews-node/dev
+datamodel: datamodel.prisma
+generate:
+  - generator: javascript-client
+    output: ../src/generated/prisma-client
