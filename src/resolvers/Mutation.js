@@ -40,7 +40,8 @@ async function login(_, args, context) {
 async function vote(_, args, context) {
   const userId = getUserId(context);
   const linkExists = await context.prisma.$exists.vote({
-    user: { id: userId }
+    user: { id: userId },
+    link: { id: args.linkId }
   });
 
   if (linkExists) {
